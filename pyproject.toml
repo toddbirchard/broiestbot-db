@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "broiestbot-db"
+version = "0.1.1"
+description = "Web GUI for connecting to and managing databases."
+authors = ["Todd Birchard <toddbirchard@gmail.com>"]
+maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/toddbirchard/broiestbot-db/"
+repository = "https://github.com/toddbirchard/broiestbot-db/"
+documentation = "https://github.com/toddbirchard/broiestbot-db/"
+keywords = [
+    "Python",
+    "SQL", 
+    "GUI",
+    "Admin", 
+    "Databases"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+flask = "*"
+flask-sqlalchemy = "*"
+pymysql = "*"
+flask-assets = "*"
+dash = "*"
+dash-core-components = "*"
+dash-html-components = "*"
+dash-renderer = "*"
+pandas = "*"
+wtforms = "*"
+redis = "*"
+python-dotenv = "*"
+pytest = "*"
+black = "*"
+isort = "*"
+cssmin = "*"
+jsmin = "*"
+lesscpy = "*"
+flake8 = "*"
+cryptography = "*"
+gunicorn = "*"
+poetry-plugin-export = "*"
+loguru = "*"
+
+[tool.poetry.scripts]
+run = "wsgi:app"
+
+[tool.poetry.urls]
+issues = "https://github.com/toddbirchard/broiestbot-db/issues"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+src_paths = [
+    "broiestbot_db",
+    "table", 
+    "clients", 
+    "config"
+]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "C0103,C0301,W0703,W0621"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
