@@ -9,7 +9,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/broiestbot-db.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/broiestbot-db/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/broiestbot-db.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/broiestbot-db/network)
 
-Lightweight Python GUI for exploring and modifying data in database. Branded version of [pythonmyadmin](https://github.com/toddbirchard/pythonmyadmin)
+Lightweight Python GUI for exploring and modifying data in database. A branded version of [pythonmyadmin](https://github.com/toddbirchard/pythonmyadmin)
 
 ## Getting Started
 
@@ -27,7 +27,7 @@ Replace the values in **.env.example** with your values and rename this file to 
 Get up and running with `make deploy`:
 
 ```shell
-$ git clone https://github.com/toddbirchard/broiestbot_db.git
+$ git clone https://github.com/toddbirchard/broiestbot-db.git
 $ cd broiestbot-db
 $ make deploy
 ```
