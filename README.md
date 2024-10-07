@@ -22,10 +22,9 @@ Replace the values in **.env.example** with your values and rename this file to 
 * `SECRET_KEY`: Randomly generated string of characters used to encrypt your app's data.
 * `SQLALCHEMY_DATABASE_URI`: Connection URI of a SQL database.
 
-*Never to commit secrets saved in **.env** files to Github. 
+⚠️*Never to commit secrets saved in **.env** files to Github.*
 
-Ensure your **
-.env** configuration is included in a **.gitignore** file before adding or committing secrets by accident.
+Ensure your **.env** configuration is included in a **.gitignore** file before adding or committing secrets by accident.
 
 ### Environment Variables
 
