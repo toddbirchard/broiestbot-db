@@ -15,7 +15,11 @@ UI is branded version of [pythonmyadmin](https://github.com/toddbirchard/pythonm
 
 ## Getting Started
 
+### Environment Variables
+
 Replace the values in **.env.example** with your values and rename this file to **.env**:
+
+Ensure your **.env** configuration is included in a **.gitignore** file before adding or committing secrets by accident.
 
 * `FLASK_APP`: Entry point of your application (should be `wsgi.py`).
 * `FLASK_DEBUG`: The environment to run your app in (either `development` or `production`).
@@ -24,14 +28,12 @@ Replace the values in **.env.example** with your values and rename this file to 
 
 ⚠️*Never to commit secrets saved in **.env** files to Github.*
 
-Ensure your **.env** configuration is included in a **.gitignore** file before adding or committing secrets by accident.
+### Start Locally
 
-### Environment Variables
-
-Get up and running with `make deploy`:
+Get up and running with `make run`:
 
 ```shell
 $ git clone https://github.com/toddbirchard/broiestbot-db.git
 $ cd broiestbot-db
-$ make deploy
+$ make run
 ```
