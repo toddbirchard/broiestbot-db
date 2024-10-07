@@ -9,7 +9,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/broiestbot-db.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/broiestbot-db/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/broiestbot-db.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/broiestbot-db/network)
 
-Lightweight Python GUI for exploring and modifying data in database. A branded version of [pythonmyadmin](https://github.com/toddbirchard/pythonmyadmin)
+Lightweight Python GUI for exploring commands available to Chatango chatbot, [broiestbot](https://github.com/toddbirchard/broiestbot).
+
+UI is branded version of [pythonmyadmin](https://github.com/toddbirchard/pythonmyadmin)
 
 ## Getting Started
 
@@ -18,9 +20,12 @@ Replace the values in **.env.example** with your values and rename this file to 
 * `FLASK_APP`: Entry point of your application (should be `wsgi.py`).
 * `FLASK_DEBUG`: The environment to run your app in (either `development` or `production`).
 * `SECRET_KEY`: Randomly generated string of characters used to encrypt your app's data.
-* `SQLALCHEMY_DATABASE_URI`: Connection URI of a SQL database
+* `SQLALCHEMY_DATABASE_URI`: Connection URI of a SQL database.
 
-*Never to commit secrets saved in `.env` files to Github.*
+*Never to commit secrets saved in **.env** files to Github. 
+
+Ensure your **
+.env** configuration is included in a **.gitignore** file before adding or committing secrets by accident.
 
 ### Environment Variables
 
