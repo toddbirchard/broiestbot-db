@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "broiestbot-db"
+name = "broiest"
 version = "0.1.1"
 description = "Web GUI for connecting to and managing databases."
 authors = ["Todd Birchard <toddbirchard@gmail.com>"]

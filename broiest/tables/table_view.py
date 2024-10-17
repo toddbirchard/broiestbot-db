@@ -97,7 +97,7 @@ def create_data_table(table_df: DataFrame) -> DataTable:
         data=table_df.to_dict("records"),
         sort_action="native",
         sort_mode="native",
-        page_size=9000,
+        page_size=90000,
         # editable=True,
         cell_selectable=True,
         markdown_options={"link_target": "_blank", "html": True},

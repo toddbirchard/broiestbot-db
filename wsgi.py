@@ -1,5 +1,5 @@
 """Application entry point."""
 
-from broiestbot_db import create_app
+from broiest import create_app
 
 app = create_app()

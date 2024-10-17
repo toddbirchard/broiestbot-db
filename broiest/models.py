@@ -2,7 +2,7 @@
 
 from flask import current_app as app
 
-from broiestbot_db import db
+from broiest import db
 
 
 class Command(db.Model):
