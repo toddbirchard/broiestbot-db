@@ -1,8 +1,7 @@
 """Data models."""
 
-from flask import current_app as app
-
 from broiest import db
+from flask import current_app as app
 
 
 class Command(db.Model):
