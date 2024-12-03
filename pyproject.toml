@@ -2,6 +2,7 @@
 name = "broiest"
 version = "0.1.1"
 description = "Web GUI for connecting to and managing databases."
+package-mode = false
 authors = ["Todd Birchard <toddbirchard@gmail.com>"]
 maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
 license = "MIT"
@@ -18,7 +19,7 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<4.0"
+python = ">=3.12,<4.0"
 flask = "*"
 flask-sqlalchemy = "*"
 pymysql = "*"
@@ -67,4 +68,4 @@ disable = "C0103,C0301,W0703,W0621"
 
 [tool.black]
 line-length = 120
-target-version = ['py310']
+target-version = ['py312']
