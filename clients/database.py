@@ -1,7 +1,6 @@
 """Database interaction module."""
 
 import pandas as pd
-from log import LOGGER
 from pandas import DataFrame
 from pandas.core.groupby.generic import DataFrameGroupBy
 from sqlalchemy import create_engine
@@ -54,7 +53,6 @@ class Database:
         table_df = pd.read_sql_table(self.table, con=self.engine, index_col="id", parse_dates="created_at")
         table_df.sort_index(inplace=True, ascending=False)
         table_df["created_at"] = table_df["created_at"].dt.strftime("%m/%d/%Y")
-        LOGGER.info(f"Successfully fetched {table_df.shape[0]} rows.")
         return table_df
 
     @staticmethod
