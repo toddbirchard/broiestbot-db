@@ -4,7 +4,7 @@ build==1.2.2.post1 ; python_version >= "3.12" and python_version < "4.0"
 cachecontrol[filecache]==0.14.1 ; python_version >= "3.12" and python_version < "4.0"
 certifi==2024.12.14 ; python_version >= "3.12" and python_version < "4.0"
 cffi==1.17.1 ; python_version >= "3.12" and python_version < "4.0" and (platform_python_implementation != "PyPy" or sys_platform == "darwin")
-charset-normalizer==3.4.0 ; python_version >= "3.12" and python_version < "4.0"
+charset-normalizer==3.4.1 ; python_version >= "3.12" and python_version < "4.0"
 cleo==2.1.0 ; python_version >= "3.12" and python_version < "4.0"
 click==8.1.8 ; python_version >= "3.12" and python_version < "4.0"
 colorama==0.4.6 ; python_version >= "3.12" and python_version < "4.0" and (sys_platform == "win32" or platform_system == "Windows" or os_name == "nt")

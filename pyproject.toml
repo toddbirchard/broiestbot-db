@@ -43,6 +43,7 @@ cryptography = "*"
 gunicorn = "*"
 poetry-plugin-export = "*"
 loguru = "*"
+coverage = "^7.6.9"
 
 [tool.poetry.scripts]
 run = "wsgi:app"
