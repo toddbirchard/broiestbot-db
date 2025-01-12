@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "broiest"
+name = "broiest.com"
 version = "0.1.1"
 description = "Web GUI for connecting to and managing databases."
 package-mode = false
@@ -7,15 +7,26 @@ authors = ["Todd Birchard <toddbirchard@gmail.com>"]
 maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/toddbirchard/broiestbot-db/"
+homepage = "https://broiest.com"
 repository = "https://github.com/toddbirchard/broiestbot-db/"
 documentation = "https://github.com/toddbirchard/broiestbot-db/"
 keywords = [
     "Python",
     "SQL", 
     "GUI",
-    "Admin", 
-    "Databases"
+    "Admin",
+    "Admin Panel", 
+    "Database",
+    "RDBMS",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Database :: Front-Ends",
+    "Framework :: Dash",
+    "Framework :: Flask",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
 ]
 
 [tool.poetry.dependencies]
@@ -41,7 +52,6 @@ lesscpy = "*"
 flake8 = "*"
 cryptography = "*"
 gunicorn = "*"
-poetry-plugin-export = "*"
 loguru = "*"
 coverage = "^7.6.9"
 
@@ -49,16 +59,21 @@ coverage = "^7.6.9"
 run = "wsgi:app"
 
 [tool.poetry.urls]
-issues = "https://github.com/toddbirchard/broiestbot-db/issues"
+issues = "https://github.com/toddbirchard/broiest-db/issues"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins]
+
+[tool.poetry.plugins."poetry.application.plugin"]
+export = "poetry_plugin_export.plugins:ExportApplicationPlugin"
 
 [tool.isort]
 profile = "black"
 src_paths = [
-    "broiestbot_db",
+    "broiest",
     "table", 
     "clients", 
     "config"

@@ -14,8 +14,8 @@ ENVIRONMENT = environ.get("ENVIRONMENT")
 proc_name = "broiest"
 wsgi_app = "wsgi:app"
 bind = "unix:broiest.sock"
-threads = 4
-workers = 2
+threads = 8
+workers = 4
 
 if ENVIRONMENT == "development" or ENVIRONMENT is None:
     reload = True
