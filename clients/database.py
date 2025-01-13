@@ -57,6 +57,7 @@ class Database:
         """
         table_df = pd.read_sql_table(self.table, con=self.engine, index_col="id", parse_dates="created_at")
         table_df.sort_index(inplace=True, ascending=False)
+        table_df.insert(0, "ID", table_df.index)
         table_df["created_at"] = table_df["created_at"].dt.strftime("%m/%d/%Y")
         return table_df
 
