@@ -32,5 +32,5 @@ def create_app() -> Flask:
         # Register App Blueprint
         app = table_view.create_dash_view(app)
 
-        LOGGER.info("Flask app initialized.")
+        LOGGER.success(f"{app.config.get('APP_NAME', 'Application')} initialized.")
         return app
