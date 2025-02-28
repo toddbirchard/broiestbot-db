@@ -27,9 +27,7 @@ def create_dash_view(server: Flask) -> Flask:
         "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
     ]
     dash_app = Dash(
-        server=server,
-        external_stylesheets=external_stylesheets,
-        routes_pathname_prefix="/",
+        server=server, external_stylesheets=external_stylesheets, routes_pathname_prefix="/", title="Broiest"
     )
 
     # Override the underlying HTML template
