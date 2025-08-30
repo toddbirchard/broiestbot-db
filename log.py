@@ -64,7 +64,7 @@ def log_formatter(record: dict) -> str:
     return "<fg #5278a3>{time:MM-DD-YYYY HH:mm:ss}</fg #5278a3> | <fg #98bedf>{level}</fg #98bedf>: <light-white>{message}</light-white>\n"
 
 
-def create_logger() -> logger:
+def create_logger():
     """
     Configure custom logger.
 
@@ -94,7 +94,7 @@ def create_logger() -> logger:
             catch=True,
             level="TRACE",
             format=log_formatter,
-            rotation="200 MB",
+            rotation="10 MB",
             compression="zip",
         )
     else:
@@ -103,7 +103,7 @@ def create_logger() -> logger:
             colorize=True,
             catch=True,
             format=log_formatter,
-            rotation="200 MB",
+            rotation="10 MB",
             compression="zip",
             level="ERROR",
         )

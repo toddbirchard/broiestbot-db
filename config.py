@@ -27,6 +27,7 @@ class Config:
     SQLALCHEMY_DATABASE_NAME = environ.get("SQLALCHEMY_DATABASE_NAME")
     SQLALCHEMY_DATABASE_PEM = environ.get("SQLALCHEMY_DATABASE_PEM")
     SQLALCHEMY_CONNECT_ARGS = {"ssl": {"ca": "./creds/ca-certificate.crt"}}
+    SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Flask-Assets
@@ -37,7 +38,7 @@ class Config:
     # Static Assets
     STATIC_FOLDER = "static"
     TEMPLATES_FOLDER = "templates"
-    COMPRESSOR_DEBUG = environ.get("COMPRESSOR_DEBUG")
+    COMPRESSOR_DEBUG = False
 
 
 settings = Config()
