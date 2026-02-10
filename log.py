@@ -83,7 +83,7 @@ def create_logger():
         logger.add(
             f"/var/log/{settings.APP_NAME}/info.json",
             format=json_formatter,
-            rotation="200 MB",
+            rotation="10 MB",
             level="TRACE",
             compression="zip",
         )

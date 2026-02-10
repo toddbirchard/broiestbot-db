@@ -62,7 +62,7 @@ def create_layout(dash_table: DataTable, table_df: DataFrame) -> html.Div:
             html.Div(
                 id="controls",
                 children=[
-                    dcc.Input(id="search", type="text", placeholder="Search by command"),
+                    dcc.Input(id="search", type="text", placeholder="Search by command", style={"maxWidth": "83%", "height": "50px"}),
                     dcc.Dropdown(
                         id="type-dropdown",
                         options=[{"label": i, "value": i} for i in table_df.type.unique() if i],
@@ -70,7 +70,7 @@ def create_layout(dash_table: DataTable, table_df: DataFrame) -> html.Div:
                         placeholder="Filter by type",
                         maxHeight=400,
                         optionHeight=40,
-                        style={"font-size": "1em"},
+                        style={"font-size": "1em", "height": "50px", "minHeight": "50px", "min-height": "50px"},
                     ),
                 ],
             ),
