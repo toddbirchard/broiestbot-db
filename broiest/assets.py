@@ -18,14 +18,13 @@ def compile_js_assets(app: Flask):
 def compile_style_assets(app: Flask):
     """Build CSS style bundle."""
     assets = Environment(app)
-    if app.config["ENVIRONMENT"] == "production":
-        Environment.auto_build = True
-        Environment.debug = False
-        less_bundle = Bundle(
-            "less/main.less",
-            filters="less,cssmin",
-            output="dist/css/style.css",
-            extra={"rel": "stylesheet/less"},
-        )
-        assets.register("less_all", less_bundle)
-        less_bundle.build(force=True)
+    Environment.auto_build = True
+    Environment.debug = False
+    less_bundle = Bundle(
+        "less/main.less",
+        filters="less,cssmin",
+        output="dist/css/style.css",
+        extra={"rel": "stylesheet/less"},
+    )
+    assets.register("less_all", less_bundle)
+    less_bundle.build(force=True)
