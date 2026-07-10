@@ -9,6 +9,7 @@ from flask import Flask
 from pandas import DataFrame
 
 from clients import db
+from logger import LOGGER
 
 from .layout import app_layout
 
@@ -27,7 +28,10 @@ def create_dash_view(server: Flask) -> Flask:
         "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
     ]
     dash_app = Dash(
-        server=server, external_stylesheets=external_stylesheets, routes_pathname_prefix="/", title="Broiest"
+        server=server,
+        external_stylesheets=external_stylesheets,
+        routes_pathname_prefix="/",
+        title="Broiest"
     )
 
     # Override the underlying HTML template
@@ -62,7 +66,12 @@ def create_layout(dash_table: DataTable, table_df: DataFrame) -> html.Div:
             html.Div(
                 id="controls",
                 children=[
-                    dcc.Input(id="search", type="text", placeholder="Search by command", style={"maxWidth": "83%", "height": "50px"}),
+                    dcc.Input(
+                        id="search",
+                        type="text",
+                        placeholder="Search by command",
+                        style={"maxWidth": "83%", "height": "50px"},
+                    ),
                     dcc.Dropdown(
                         id="type-dropdown",
                         options=[{"label": i, "value": i} for i in table_df.type.unique() if i],
@@ -120,6 +129,7 @@ def create_data_table(table_df: DataFrame) -> DataTable:
             },
         ],
     )
+    LOGGER.info(f"Rendered DataTable with {str(table_df.shape[0])} rows and {str(table_df.shape[1])} columns.")
     return table
 
 

@@ -12,7 +12,7 @@ class Config:
     """Global configuration variables."""
 
     # General Config
-    APP_NAME = "broiest"
+    APP_NAME = "broiestdb"
     ENVIRONMENT = environ.get("ENVIRONMENT")
 
     # Flask Config

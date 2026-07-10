@@ -2,7 +2,7 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from log import LOGGER
+from logger import LOGGER
 
 db = SQLAlchemy()
 

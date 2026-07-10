@@ -7,6 +7,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.types import DateTime, Integer, String, Text
 
+from logger import LOGGER
+
 
 class Database:
     """Database connection object."""
@@ -46,8 +48,8 @@ class Database:
                 "created_at": DateTime,
             },
         )
-        response = f"Successfully uploaded {str(df.count)} rows."
-        return response
+        LOGGER.info(f"Successfully uploaded {str(df.count)} rows to {self.table}.")
+        return f"Successfully uploaded {str(df.count)} rows to {self.table}."
 
     def get_table_data(self) -> DataFrame:
         """
@@ -59,6 +61,7 @@ class Database:
         table_df.sort_index(inplace=True, ascending=False)
         table_df.insert(0, "ID", table_df.index)
         table_df["created_at"] = table_df["created_at"].dt.strftime("%m/%d/%Y")
+        LOGGER.info(f"Fetched {str(table_df.shape[0])} rows from {self.table}.")
         return table_df
 
     @staticmethod
