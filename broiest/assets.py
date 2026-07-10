@@ -7,7 +7,7 @@ from flask_assets import Bundle, Environment
 def compile_js_assets(app: Flask):
     """Build JS bundle."""
     assets = Environment(app)
-    if app.config["ENVIRONMENT"] == "production":
+    if app.config["ENVIRONMENT"] == "development":
         Environment.auto_build = True
         Environment.debug = False
         js_bundle = Bundle("js/*.js", filters="jsmin", output="dist/js/main.js")
@@ -18,7 +18,7 @@ def compile_js_assets(app: Flask):
 def compile_style_assets(app: Flask):
     """Build CSS style bundle."""
     assets = Environment(app)
-    if app.config["ENVIRONMENT"] == "production":
+    if app.config["ENVIRONMENT"] == "development":
         Environment.auto_build = True
         Environment.debug = False
         less_bundle = Bundle(
