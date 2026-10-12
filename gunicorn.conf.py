@@ -23,6 +23,7 @@ if ENVIRONMENT == "development" or ENVIRONMENT is None:
     threads = 1
     bind = ["127.0.0.1:8006"]
 elif ENVIRONMENT == "production":
+    bind = ["127.0.0.1:8006"]
     access_log_format = "%(h)s %(l)s %(u)s %(t)s %(r)s %(s)s %(b)s %(f)s %(a)s"
     accesslog = "/var/log/broiestdb/info.json"
     errorlog = "/var/log/broiestdb/error.json"
