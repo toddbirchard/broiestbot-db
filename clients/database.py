@@ -1,13 +1,12 @@
 """Database interaction module."""
 
 import pandas as pd
+from logger import LOGGER
 from pandas import DataFrame
 from pandas.core.groupby.generic import DataFrameGroupBy
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.types import DateTime, Integer, String, Text
-
-from logger import LOGGER
 
 
 class Database:

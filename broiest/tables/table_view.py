@@ -6,10 +6,10 @@ from dash import Dash, dcc, html
 from dash.dash_table import DataTable
 from dash.dependencies import Input, Output
 from flask import Flask
+from logger import LOGGER
 from pandas import DataFrame
 
 from clients import db
-from logger import LOGGER
 
 from .layout import app_layout
 
@@ -28,10 +28,7 @@ def create_dash_view(server: Flask) -> Flask:
         "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
     ]
     dash_app = Dash(
-        server=server,
-        external_stylesheets=external_stylesheets,
-        routes_pathname_prefix="/",
-        title="Broiest"
+        server=server, external_stylesheets=external_stylesheets, routes_pathname_prefix="/", title="Broiest"
     )
 
     # Override the underlying HTML template
